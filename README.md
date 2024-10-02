@@ -1,41 +1,40 @@
+# Airbnb Listing Analysis in Paris
 
-# Project Overview
-
-This project focuses on analyzing Airbnb listings in Paris. Using Python libraries such as **Pandas**, **Seaborn**, and **Matplotlib**, we explored and visualized key trends related to host behaviors, listing prices, and accommodations in various Paris neighborhoods over time. 
+## Project Overview
+This project involves analyzing Airbnb listings in Paris to uncover insights about pricing trends, host activity, and neighborhood dynamics. The primary focus is to understand how factors such as the number of accommodations and location impact the price per night.
 
 ## Objectives
+- Filter and analyze Airbnb listings in Paris.
+- Investigate the relationship between the neighborhood and average price.
+- Track new hosts over time and how prices have changed.
+- Identify insights that can help stakeholders make informed decisions.
 
-The main goal was to gain insights into:
-- The distribution of listings across different neighborhoods in Paris.
-- Pricing trends for various types of accommodations.
-- The impact of new hosts and overall Airbnb growth over time.
+## Methodology
 
-## Data Exploration and Cleaning
+### Data Importing and Cleaning
+- Imported the dataset using Pandas.
+- Handled missing values and converted date columns to the appropriate format.
 
-- **Data Source**: The dataset includes 279,712 Airbnb listings, with 33 columns of attributes such as `host_id`, `listing_id`, `price`, `neighbourhood`, and `review_scores`.
-- **Date Parsing**: We converted relevant date columns (e.g., `host_since`) into a proper datetime format to facilitate time-based analysis.
-- **Handling Missing Values**: Some columns had missing data, such as `host_response_rate` and `host_acceptance_rate`. These were handled during data exploration.
-- **Filtering**: We filtered the data to focus on listings based in **Paris**, specifically looking at key attributes like `host_since`, `neighbourhood`, `accommodates`, and `price`.
+### Data Filtering
+- Focused on listings located in Paris and retained relevant columns for analysis: `host_since`, `neighbourhood`, `city`, `accommodates`, and `price`.
 
-## Analysis Techniques
+### Data Exploration and Analysis Techniques
+- Performed descriptive statistics to calculate the mean, min, max, and count of numeric fields.
+- Grouped data by neighborhood to analyze average prices.
+- Analyzed the relationship between accommodation capacity and pricing.
 
-### Descriptive Statistics:
-- Calculated descriptive statistics to examine key metrics like average prices, accommodation sizes, and host activity over time. For example, the average price per listing in Paris was approximately **113 Euros**, with a large variation across different neighborhoods.
+### Data Visualization
+  - Used Seaborn and Matplotlib to visualize:
+  - Average listing price by neighborhood.
+  - Average price based on accommodation capacity.
+  - Trends in new hosts and average prices over time.
 
-### Data Aggregation:
-- Grouped listings by neighborhoods and years to analyze price trends and new host activity. This helped identify neighborhoods with the highest and lowest average listing prices, as well as how the number of hosts evolved over time.
+## Insights
+- Identified neighborhoods with varying average prices for listings.
+- Noted a decrease in the number of new hosts and an increase in average prices following regulations introduced in 2015.
 
-### Visualization:
-- We created visualizations using **Seaborn** and **Matplotlib** to display:
-    - Average listing prices across Parisian neighborhoods.
-    - Pricing trends based on accommodation size.
-    - The number of new Airbnb hosts by year.
-    - Price changes over time.
-
-### Key Insights:
-- Certain upscale neighborhoods like **Elysee** and **Louvre** had the highest average prices, while **Menilmontant** and **Buttes-Chaumont** were more affordable.
-- Regulatory changes around 2015 seemed to correlate with fewer new hosts but rising prices across the city.
-
-## Outcome
-
-This project provided a comprehensive overview of Airbnb listings in Paris, uncovering pricing patterns and host trends. By examining the impact of local regulations and other market forces, these findings can help both hosts and potential guests better understand the dynamics of the Paris Airbnb market.
+## Libraries Used
+- **Pandas:** For data manipulation, cleaning, and aggregation.
+- **NumPy:** For numerical operations and array handling.
+- **Seaborn:** For data visualization (bar plots, trends).
+- **Matplotlib:** For generating more complex visualizations (combined time series plot).
