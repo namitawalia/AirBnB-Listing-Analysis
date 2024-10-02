@@ -1,4 +1,4 @@
-# Airbnb Listing Analysis in Paris
+# Airbnb Listing Analysis
 
 ## Project Overview
 This project involves analyzing Airbnb listings in Paris to uncover insights about pricing trends, host activity, and neighborhood dynamics. The primary focus is to understand how factors such as the number of accommodations and location impact the price per night.
